@@ -5,15 +5,16 @@ global uv
 
 '''
 爬虫线程的链接保存集合，按层分配，一层一个set()
+
 '''
 class urlQuence:
 
     def __init__(self, deepth):
-        #已访问的url集合 visited url set
+        #visited url set
         self.visited=set()
-        #设定爬去深度 set the deepth of crapping
+        #set the deepth of crapping
         self.deepth = deepth
-        #未访问的url字典，按层数做key unvisited url set, key is the depth of url
+        #unvisited url set, key is the depth of url
         self.unVisited = {}
 
         for i in range(self.deepth):

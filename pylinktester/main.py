@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import model.urlQuence as urlQuence
+#import model.urlQuence as urlQuence
 import threads.threadController as tc
 import model.urlSync as urlSync
+from model import urlQuence
 
 
 if __name__=="__main__":

@@ -10,7 +10,6 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 
 '''
-获取当前页所有链接
 Get all URLs within current page
 '''
 def geturls(url):
@@ -29,7 +28,6 @@ def geturls(url):
 				urlset.add('http:www.shapeways.com'+link.get('href'))
 	return urlset
 '''
-获取当前网页源码
 Get source of current page
 '''
 def getsource(url):
