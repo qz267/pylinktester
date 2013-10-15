@@ -19,7 +19,7 @@ def testUrls(url, repeat = 3):
 	if url is not None:
 		req, opener = getRequest.getRequest(url)
 		try:
-			urlopen = opener.open(req, timeout = 10)
+			urlopen = opener.open(req, timeout = 30)
 		except urllib2.HTTPError, ex:
 			if(repeat > 0):
 				testUrls(url, repeat - 1)

@@ -9,20 +9,20 @@ global uv
 class urlQuence:
 
     def __init__(self, deepth):
-        #已访问的url集合
+        #已访问的url集合 visited url set
         self.visited=set()
-        #设定爬去深度
+        #设定爬去深度 set the deepth of crapping
         self.deepth = deepth
-        #未访问的url字典，按层数做key
+        #未访问的url字典，按层数做key unvisited url set, key is the depth of url
         self.unVisited = {}
 
         for i in range(self.deepth):
             self.unVisited[i+1] = set()
 
-    #获取访问过的url集合
+    #获取访问过的url集合 get visited url set
     def getVisitedUrl(self):
         return self.visited
-    #获取未访问的url集合
+    #获取未访问的url集合 get unvisited url set
     def getUnvisitedUrl(self):
         uv = set()
         for i, s in self.unVisited.items():
